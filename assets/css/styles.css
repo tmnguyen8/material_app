@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+/* Navigation */
+.logo-img {
+    width: 30%;
+    margin: auto;
+}
+#nav {
+    background-color: #00205B;
+}

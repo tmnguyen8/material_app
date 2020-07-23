@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./AT-PAC_favicon.ico">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
     <title>Material Calculator</title>
 </head>
 <body>
+    <!-- Navigation -->
+    <section id="nav">
+        <nav class="navbar" class="container-fluid">
+            <img class="logo-img" src="./assets/images/logo-no-subtext-544w.png" alt="logo-img">
+        </nav>
+    </section>
+
+    <!-- Calculation -->
+    <section id="calculation" class="row container-fluid">
+        <!-- Form -->
+        <div id="input-form" class="col-lg-8">
+            <form action="" >
+                <div class="input-group input-group-sm">
+                    <div class="input-group-text" id="inputGroup-sizing-sm">Scaffold Title</div>
+                </div>
+                <input type="text" class="form-control">
+            </form>
+        </div>
+
+        <!-- Result Table -->
+        <div id="output-table" class="col-lg-4">
+
+        </div>
+    </section>
+        
+    <!-- Javascript -->
     <script>
         function readTextFile(file, callback) {
             var rawFile = new XMLHttpRequest();
