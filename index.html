@@ -22,10 +22,69 @@
         <!-- Form -->
         <div id="input-form" class="col-lg-8">
             <form action="" >
-                <div class="input-group input-group-sm">
-                    <div class="input-group-text" id="inputGroup-sizing-sm">Scaffold Title</div>
+                <div class="calculator-input">
+                    <label for="projectTitle" id="project-title">Project Title</label>
+                    <br>
+                    <input type="text" class="form-control" id="projectTitle">
                 </div>
-                <input type="text" class="form-control">
+                <div class="calculator-input">
+                    <label for="scaffoldLength" class="input-label">Scafold Length</label>
+                    <br>
+                    <input type="number" min="0"  class="form-control" id="scaffoldLength">
+                </div>
+                <div class="calculator-input">
+                    <label for="scaffoldHeight" class="input-label">Scafold Height</label>
+                    <br>
+                    <input type="number" min="0"  class="form-control" id="scaffoldHeight" name="scaffoldHeight">
+                </div>
+                <div class="calculator-input">
+                    <label for="scaffoldBayWidth" class="input-label">Preferred Bay Width</label>
+                    <br>
+                    <select name="scaffoldBayWidth" id="scaffoldBayWidth" class="form-control">
+                        <option value="01.03.015.00" data-length="0.15">Ledger O-Type 0'-6"</option>
+                        <option value="01.03.061.00" data-length="0.61">Ledger O-Type 2'-0"</option>
+                        <option value="01.03.065.00" data-length="0.65">Ledger O-Type 2'-2"</option>
+                        <option value="01.03.088.00" data-length="0.88">Ledger O-Type 2'-10 5/8"</option>
+                        <option value="01.03.091.00" data-length="0.91">Ledger O-Type 3'-0"</option>
+                        <option value="01.03.106.00" data-length="1.065">Ledger O-Type 3'-6"</option>
+                        <option value="01.03.109.00" data-length="1.09">Ledger O-Type 3'-7"</option>
+                        <option value="01.03.115.00" data-length="1.15">Ledger O-Type 3'-10"</option>
+                        <option value="01.03.121.00" data-length="1.21">Ledger O-Type 4'-0"</option>
+                        <option value="01.03.128.00" data-length="1.28">Ledger O-Type 4'-2"</option>
+                        <option value="01.03.152.00" data-length="1.52">Ledger O-Type 5'-0"</option>
+                        <option value="01.03.157.00" data-length="1.57">Ledger O-Type 5'-2"</option>
+                        <option value="01.03.182.00" data-length="1.82">Ledger O-Type 6'-0"</option>
+                        <option value="01.03.213.00" data-length="2.13">Ledger O-Type 7'-0"</option>
+                        <option value="01.03.243.00" data-length="2.43">Ledger O-Type 8'-0"</option>
+                        <option value="01.03.305.00" data-length="3.05">Ledger O-Type 10'-0"</option>
+                    </select>
+                </div>
+                <br>
+                <div class="calculator-input">
+                    <label for="scaffoldBayLength" class="input-label">Preferred Bay Length</label>
+                    <br>
+                    <select name="scaffoldBayLength" id="scaffoldBayLength" class="form-control">
+                        <option value="01.03.015.00" data-length="0.15">Ledger O-Type 0'-6"</option>
+                        <option value="01.03.061.00" data-length="0.61">Ledger O-Type 2'-0"</option>
+                        <option value="01.03.065.00" data-length="0.65">Ledger O-Type 2'-2"</option>
+                        <option value="01.03.088.00" data-length="0.88">Ledger O-Type 2'-10 5/8"</option>
+                        <option value="01.03.091.00" data-length="0.91">Ledger O-Type 3'-0"</option>
+                        <option value="01.03.106.00" data-length="1.065">Ledger O-Type 3'-6"</option>
+                        <option value="01.03.109.00" data-length="1.09">Ledger O-Type 3'-7"</option>
+                        <option value="01.03.115.00" data-length="1.15">Ledger O-Type 3'-10"</option>
+                        <option value="01.03.121.00" data-length="1.21">Ledger O-Type 4'-0"</option>
+                        <option value="01.03.128.00" data-length="1.28">Ledger O-Type 4'-2"</option>
+                        <option value="01.03.152.00" data-length="1.52">Ledger O-Type 5'-0"</option>
+                        <option value="01.03.157.00" data-length="1.57">Ledger O-Type 5'-2"</option>
+                        <option value="01.03.182.00" data-length="1.82">Ledger O-Type 6'-0"</option>
+                        <option value="01.03.213.00" data-length="2.13">Ledger O-Type 7'-0"</option>
+                        <option value="01.03.243.00" data-length="2.43">Ledger O-Type 8'-0"</option>
+                        <option value="01.03.305.00" data-length="3.05">Ledger O-Type 10'-0"</option>
+                    </select>
+                </div>
+                <br>
+
+
             </form>
         </div>
 
