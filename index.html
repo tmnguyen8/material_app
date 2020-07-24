@@ -22,27 +22,36 @@
     <!-- Calculation -->
     <section id="calculation" class="row container-fluid">
         <!-- Form -->
-        <div id="input-form" class="col-lg-8">
+        <div id="input-form" class="col-lg-6">
             <form action="" >
-                <div class="calculator-input">
-                    <label for="projectTitle" id="project-title">Project Title</label>
-                    <br>
-                    <input type="text" class="form-control" id="projectTitle">
+                <div class="calculator-input row">
+                    <label class="col-4" for="projectTitle" id="project-title">Project Title</label>
+                    <input class="col-8" type="text" class="form-control" id="projectTitle">
                 </div>
-                <div class="calculator-input">
-                    <label for="scaffoldLength" class="input-label">Scafold Length</label>
-                    <br>
-                    <input type="number" min="0"  class="form-control" id="scaffoldLength">
+                <br>
+                <div class="calculator-input row">
+                    <label class="col-4" for="scaffoldLength" class="input-label">Scafold Length (ft)</label>
+                    <input class="col-8" type="number" min="0"  class="form-control" id="scaffoldLength">
                 </div>
-                <div class="calculator-input">
-                    <label for="scaffoldHeight" class="input-label">Scafold Height</label>
-                    <br>
-                    <input type="number" min="0"  class="form-control" id="scaffoldHeight" name="scaffoldHeight">
+                <br>
+                <div class="calculator-input row">
+                    <label class="col-4" for="scaffoldHeight" class="input-label">Scafold Height (ft)</label>
+                    <input class="col-8" type="number" min="0"  class="form-control" id="scaffoldHeight" name="scaffoldHeight">
                 </div>
-                <div class="calculator-input">
-                    <label for="scaffoldBayWidth" class="input-label">Preferred Bay Width</label>
-                    <br>
-                    <select name="scaffoldBayWidth" id="scaffoldBayWidth" class="form-control">
+                <br>
+                <div class="calculator-input row">
+                    <label class="col-4" for="scaffoldHeight" class="input-label">Scafold Height (ft)</label>
+                    <input class="col-8" type="number" min="0"  class="form-control" id="scaffoldHeight" name="scaffoldHeight">
+                </div>
+                <br>
+                <div class="calculator-input row">
+                    <label class="col-4" for="numDecked" class="input-label">Number of Decked Levels</label>
+                    <input class="col-8" type="number" min="0"  class="form-control" id="scaffoldHeight" name="scaffoldHeight">
+                </div>
+                <br>
+                <div class="calculator-input row">
+                    <label class="col-4" for="scaffoldBayWidth" class="input-label">Preferred Bay Width</label>
+                    <select class="col-8" name="scaffoldBayWidth" id="scaffoldBayWidth" class="form-control">
                         <option value="01.03.015.00" data-length="0.15">Ledger O-Type 0'-6"</option>
                         <option value="01.03.061.00" data-length="0.61">Ledger O-Type 2'-0"</option>
                         <option value="01.03.065.00" data-length="0.65">Ledger O-Type 2'-2"</option>
@@ -62,10 +71,9 @@
                     </select>
                 </div>
                 <br>
-                <div class="calculator-input">
-                    <label for="scaffoldBayLength" class="input-label">Preferred Bay Length</label>
-                    <br>
-                    <select name="scaffoldBayLength" id="scaffoldBayLength" class="form-control">
+                <div class="calculator-input row">
+                    <label class="col-4" for="scaffoldBayLength" class="input-label">Preferred Bay Length</label>
+                    <select class="col-8" name="scaffoldBayLength" id="scaffoldBayLength" class="form-control">
                         <option value="01.03.015.00" data-length="0.15">Ledger O-Type 0'-6"</option>
                         <option value="01.03.061.00" data-length="0.61">Ledger O-Type 2'-0"</option>
                         <option value="01.03.065.00" data-length="0.65">Ledger O-Type 2'-2"</option>
@@ -85,7 +93,7 @@
                     </select>
                 </div>
                 <br>
-                <button>MTO</button>
+                <button class="btn btn-dark" id="calculateMTO">Calculate MTO</button>
 
             </form>
         </div>
@@ -99,25 +107,54 @@
     <!-- Javascript -->
     <script>
         // Defining Variables
+        var projectTitle = "";
+        var scaffoldLength=0;
+        var scaffoldHeight=0;
+        var scaffoldBayLength=0;
+        var scaffoldBayWidth=0;
+        var numBayLength;
+        var numBayWidth;
+        var resultMTO = [];
+
         var materialData =  (function() {
             var json = null;
             $.ajax({
-                'async': false,
+                'async': true,
                 'global': false,
                 'url': "./material_data_min.json",
                 'dataType': "json",
                 'success': function(data) {
-                json = data;
+                    json = data;
                 }
             });
             return json;
         })();
 
-        var projectTitle = $("#projectTitle").val();
+        // Get Number of Bay Based on total length and each bay length
+        var getNumSegment = (totalLength, bayLength) => {
+            var result = {
+                numSegment: Math.floor(totalLength/bayLength),
+                remainderLength: totalLength%bayLength
+            }   
+            return result;
+        }
 
-        console.log("projectTitle", projectTitle)
 
-        console.log(materialData)
+
+        // Onlick Calculate MTO to gather input variables
+        $(document).on("click","#calculateMTO",function(event){
+            event.preventDefault();
+            projectTitle = $("#projectTitle").val().trim();
+            scaffoldLength = parseInt($("#scaffoldLength").val())*0.3048 //scaffold length is in meter;
+            scaffoldHeight = parseInt($("#scaffoldHeight").val())*0.3048 //scaffold width is in meter;
+            scaffoldBayWidth = $("#scaffoldBayWidth").find(':selected').data('length') //in meter;
+            scaffoldBayLength = $("#scaffoldBayLength").find(':selected').data('length') //in meter;
+            numBayLength = getNumSegment(scaffoldLength, scaffoldBayLength);
+            numLift = Math.round(scaffoldHeight/2); //assuming 2m lift
+
+            console.log(numBayLength)
+        });
+        
     </script>
 </body>
 </html>
