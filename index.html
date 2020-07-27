@@ -22,7 +22,7 @@
     <!-- Calculation -->
     <section id="calculation" class="row container-fluid">
         <!-- Form -->
-        <div id="input-form" class="col-lg-6">
+        <div id="input-form" class="col-md-6">
             <form action="" >
                 <div class="calculator-input row">
                     <label class="col-4" for="projectTitle" id="project-title">Project Title</label>
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Result Table -->
-        <div id="output-table" class="col-lg-4">
+        <div id="output-table" class="col-md-4">
 
         </div>
     </section>
@@ -115,29 +115,44 @@
         var numBayLength;
         var numBayWidth;
         var resultMTO = [];
+        var materialData = new Object();
 
-        var materialData =  (function() {
-            var json = null;
-            $.ajax({
-                'async': true,
-                'global': false,
-                'url': "./material_data_min.json",
-                'dataType': "json",
-                'success': function(data) {
-                    json = data;
-                }
-            });
-            return json;
-        })();
-
+        // Get Material Data from json file and assign to material data
+        $.getJSON( "./material_data_min.json", function( data ) {
+            materialData = {...data};
+        }).then(()=>{
+            // console.log(materialData)
+            // DO SOMETHING TO LET USER KNOW DATA IS LOADED
+        })
+        .fail((error)=>{
+            console.log("Error:", error)
+        });
+        
         // Get Number of Bay Based on total length and each bay length
-        var getNumSegment = (totalLength, bayLength) => {
+        const getNumSegment = (totalLength, bayLength) => {
             var result = {
                 numSegment: Math.floor(totalLength/bayLength),
                 remainderLength: totalLength%bayLength
-            }   
+            };   
             return result;
-        }
+        };
+
+        // Get scaffold bay length item
+        const getBayLengthItem = (totalLength, preferredBay) => {
+            var numBayLength = getNumSegment(totalLength, preferredBay);
+            console.log("total length=", totalLength, "preferredBay=",preferredBay)
+            for (i of materialData.material_data_min) {
+                
+                console.log("remainder=", numBayLength.remainderLength, "Ledgerlength=", i.length_m)
+                console.log("remainer / target ledger length=", numBayLength.remainderLength / i.length_m)
+
+                // if(Math.floor(numBayLength.remainderLength / i.length_m)==0){
+                //     console.log("remainer=", numBayLength.remainderLength, "Ledgerlength=", i.length_m)
+                // } else {
+                //     console.log("no")
+                // }
+            };
+        };
 
 
 
@@ -149,11 +164,10 @@
             scaffoldHeight = parseInt($("#scaffoldHeight").val())*0.3048 //scaffold width is in meter;
             scaffoldBayWidth = $("#scaffoldBayWidth").find(':selected').data('length') //in meter;
             scaffoldBayLength = $("#scaffoldBayLength").find(':selected').data('length') //in meter;
-            numBayLength = getNumSegment(scaffoldLength, scaffoldBayLength);
-            numLift = Math.round(scaffoldHeight/2); //assuming 2m lift
 
-            console.log(numBayLength)
-        });
+            numLift = Math.round(scaffoldHeight/2); //assuming 2m lift
+            getBayLengthItem(scaffoldLength, scaffoldBayLength)
+        })
         
     </script>
 </body>

@@ -9,310 +9,276 @@
          "length_m": "0.5"
       },
       {
-         "01.34.100.00": {
+         "name": "01.34.100.00",
          "description": "Standard 1.0m_3ft-3in (2 Ring) - Bolted Spigot",
          "weight_kg": "5.66",
          "weight_lb": "12.480300000000002",
          "rack_qty": "180",
          "length_m": "1"
-         }
       },
       {
-         "01.34.150.00": {
+         "name": "01.34.150.00",
          "description": "Standard 1.5m_4ft-11in (3 Ring) - Bolted Spigot",
          "weight_kg": "6.89",
          "weight_lb": "15.19245",
          "rack_qty": "90",
          "length_m": "1.5"
-         }
       },
       {
-         "01.34.200.00": {
+         "name": "01.34.200.00",
          "description": "Standard 2.0m_6ft-6in (4 Ring) - Bolted Spigot",
          "weight_kg": "10.35",
          "weight_lb": "22.82175",
          "rack_qty": "90",
          "length_m": "2"
-         }
       },
       {
-         "01.34.250.00": {
+         "name": "01.34.250.00",
          "description": "Standard 2.5m_8ft-2in ( 5 Ring) - Bolted Spigot",
          "weight_kg": "12.65",
          "weight_lb": "27.893250000000002",
          "rack_qty": "90",
          "length_m": "2.5"
-         }
       },
       {
-         "01.34.300.00": {
+         "name": "01.34.300.00",
          "description": "Standard 3.0m_9ft-9in (6 Ring) - Bolted Spigot",
          "weight_kg": "15.03",
          "weight_lb": "33.141149999999996",
          "rack_qty": "90",
          "length_m": "3"
-         }
       },
       {
-         "01.34.400.00": {
+         "name": "01.34.400.00",
          "description": "Standard 4.0m_13ft-1in (8 Ring) - Bolted Spigot",
          "weight_kg": "19.51",
          "weight_lb": "43.01955",
          "rack_qty": "90",
          "length_m": "4"
-         }
       },
       {
-         "01.03.015.00": {
+         "name": "01.03.015.00",
          "description": "Ledger O-Type 0.15m_6in",
          "weight_kg": "1.21",
          "weight_lb": "2.66805",
          "rack_qty": "1200",
          "length_m": "0.15"
-         }
       },
       {
-         "01.03.061.00": {
+         "name": "01.03.061.00",
          "description": "Ledger O-Type .61m_2ft-0in",
          "weight_kg": "2.73",
          "weight_lb": "6.01965",
          "rack_qty": "450",
          "length_m": "0.61"
-         }
       },
       {
-         "01.03.065.00": {
+         "name": "01.03.065.00",
          "description": "Ledger O-Type .65m_2ft-2in",
          "weight_kg": "3.12",
          "weight_lb": "6.879600000000001",
          "rack_qty": "600",
          "length_m": "0.65"
-         }
       },
       {
-         "01.03.088.00": {
+         "name": "01.03.088.00",
          "description": "Ledger O-Type .88m_2ft-10 5_8in",
          "weight_kg": "3.98",
          "weight_lb": "8.7759",
          "rack_qty": "300",
          "length_m": "0.88"
-         }
       },
       {
-         "01.03.091.00": {
+         "name": "01.03.091.00",
          "description": "Ledger O-Type .91m_3ft",
          "weight_kg": "4.12",
          "weight_lb": "9.0846",
          "rack_qty": "300",
          "length_m": "0.91"
-         }
       },
       {
-         "01.03.106.00": {
+         "name": "01.03.106.00",
          "description": "Ledger O-Type 1.065m_3ft-6in",
          "weight_kg": "4.68",
          "weight_lb": "10.3194",
          "rack_qty": "200",
          "length_m": "1.065"
-         }
       },
       {
-         "01.03.109.00": {
+         "name": "01.03.109.00",
          "description": "Ledger O-Type 1.09m_3ft-7in",
          "weight_kg": "4.6",
          "weight_lb": "10.142999999999999",
          "rack_qty": "200",
          "length_m": "1.09"
-         }
       },
       {
-         "01.03.115.00": {
+         "name": "01.03.115.00",
          "description": "Ledger O-Type 1.15m_3ft-10in",
          "weight_kg": "5",
          "weight_lb": "11.025",
          "rack_qty": "150",
          "length_m": "1.15"
-         }  
       },
       {
-         "01.03.121.00": {
+         "name": "01.03.121.00",
          "description": "Ledger O-Type 1.21m_4ft",
          "weight_kg": "5.26",
          "weight_lb": "11.5983",
          "rack_qty": "150",
          "length_m": "1.21"
-         }
       },
       {
-         "01.03.128.00": {
+         "name": "01.03.128.00",
          "description": "Ledger O-Type 1.28m_4ft-2in",
          "weight_kg": "5.631818181818182",
          "weight_lb": "12.418159090909091",
          "rack_qty": "150",
          "length_m": "1.28"
-         }
       },
       {
-         "01.03.152.00": {
+         "name": "01.03.152.00",
          "description": "Ledger O-Type 1.52m_5ft",
          "weight_kg": "6.41",
          "weight_lb": "14.13405",
          "rack_qty": "150",
          "length_m": "1.52"
-         }
       },
       {
-         "01.03.157.00": {
+         "name":"01.03.157.00",
          "description": "Ledger O-Type 1.57m_5ft-2in",
          "weight_kg": "6.36",
          "weight_lb": "14.023800000000001",
          "rack_qty": "150",
          "length_m": "1.57"
-         }
       },
       {
-         "01.03.182.00": {
+         "name": "01.03.182.00",
          "description": "Ledger O-Type 1.82m_6ft",
          "weight_kg": "7.56",
          "weight_lb": "16.6698",
          "rack_qty": "150",
          "length_m": "1.82"
-         }
       },
       {
-         "01.03.213.00": {
+         "name": "01.03.213.00",
          "description": "Ledger O-Type 2.13m_7ft",
          "weight_kg": "8.7",
          "weight_lb": "19.1835",
          "rack_qty": "150",
          "length_m": "2.13"
-         }
       },
       {
-         "01.03.243.00": {
+         "name": "01.03.243.00",
          "description": "Ledger O-Type 2.43m_8ft",
          "weight_kg": "9.85",
          "weight_lb": "21.71925",
          "rack_qty": "150",
          "length_m": "2.43"
-         }
       },
       {
-         "01.03.305.00": {
+         "name": "01.03.305.00",
          "description": "Ledger O-Type 3.05m_10ft",
          "weight_kg": "12.17",
          "weight_lb": "26.83485",
          "rack_qty": "150",
          "length_m": "3.05"
-         }
       },
       {
-         "01.06.088.00": {
+         "name": "01.06.088.00",
          "description": "Bay Brace 2.0 x 0.88 m_2ft-10 5_8in",
          "weight_kg": "7.88",
          "weight_lb": "17.3754",
          "rack_qty": "150",
          "length_m": "0.88"
-         }
       },
       {
-         "01.06.091.00": {
+         "name": "01.06.091.00",
          "description": "Bay Brace 2.0 x 0.91m_3ft-0in",
          "weight_kg": "7.91",
          "weight_lb": "17.44155",
          "rack_qty": "150",
          "length_m": "0.91"
-         }
       },
       {
-         "01.06.106.00": {
+         "name": "01.06.106.00",
          "description": "Bay Brace 2.0 x 1.065m_3ft-6in",
          "weight_kg": "8.08",
          "weight_lb": "17.8164",
          "rack_qty": "150",
          "length_m": "1.065"
-         }
       },
       {
-         "01.06.109.00": {
+         "name": "01.06.109.00",
          "description": "Bay Brace 2.0 x 1.09m_3ft-7in",
          "weight_kg": "8.1",
          "weight_lb": "17.8605",
          "rack_qty": "150",
          "length_m": "1.09"
-         }
       },
       {
-         "01.06.115.00": {
+         "name": "01.06.115.00",
          "description": "Bay Brace 2.0 x 1.15m_3ft-10in",
          "weight_kg": "8.17",
          "weight_lb": "18.01485",
          "rack_qty": "150",
          "length_m": "1.15"
-         }
       },
       {
-         "01.06.121.00": {
+         "name": "01.06.121.00",
          "description": "Bay Brace 2.0 x 1.21m_4ft-0in",
          "weight_kg": "8.27",
          "weight_lb": "18.23535",
          "rack_qty": "150",
          "length_m": "1.21"
-         }
       },
       {
-         "01.06.152.00": {
+         "name": "01.06.152.00",
          "description": "Bay Brace 2.0 x 1.52m_5ft-0in",
          "weight_kg": "8.71",
          "weight_lb": "19.205550000000002",
          "rack_qty": "150",
          "length_m": "1.52"
-         }
       },
       {
-         "01.06.157.00": {
+         "name": "01.06.157.00",
          "description": "Bay Brace 2.0 x 1.57m_5ft-2in",
          "weight_kg": "8.79",
          "weight_lb": "19.38195",
          "rack_qty": "150",
          "length_m": "1.57"
-         }
       },
       {
-         "01.06.182.00": {
+         "name": "01.06.182.00",
          "description": "Bay Brace 2.0 x 1.82m_6ft-0in",
          "weight_kg": "9.23",
          "weight_lb": "20.35215",
          "rack_qty": "150",
          "length_m": "1.82"
-         }
       },
       {
-         "01.06.213.00": {
+         "name": "01.06.213.00",
          "description": "Bay Brace 2.0 x 2.13m_7ft-0in",
          "weight_kg": "9.8",
          "weight_lb": "21.609",
          "rack_qty": "150",
          "length_m": "2.13"
-         }
       },
       {
-         "01.06.243.00": {
+         "name": "01.06.243.00",
          "description": "Bay Brace 2.0 x 2.43m_8ft-0",
          "weight_kg": "10.44",
          "weight_lb": "23.0202",
          "rack_qty": "150",
          "length_m": "2.43"
-         }
       },
       {
-         "01.06.305.00": {
+         "name": "01.06.305.00",
          "description": "Bay Brace 2.0 x 3.05m_10ft-0in",
          "weight_kg": "11.82",
          "weight_lb": "26.063100000000002",
          "rack_qty": "150",
          "length_m": "3.05"
-         }
       }
    ]
 }
